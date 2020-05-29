@@ -1,0 +1,28 @@
+{
+  "blogPosts": [
+    {
+      "_id": {
+          "$oid": "5ed00fb9c170e10898ce5974"
+      },
+      "title": "My First Blog",
+      "author": "Brandon White",
+      "body": "Yo, I might not got paper, but my rhymes greater. So even the folk that only understand sign language is understanding my flavor. I make 'em through tantrums like cry babies. They ride reckless on the beat, I drive safely. I try not to hurt 'em but I might maybe have 'em dumbfounded by my wise sayings. The tables turned and the tides changing. The momentum shifts. I'm always. I end, I begin again. When life closes a door, The Lord opens other entrances. And I walk through 'em. Homey what in the hell are y'all doing? That's not rapping right there, the fame got y'all ruined. So I had to set some booth time aside to talk to 'em. You already know what's going on, like the Jaws music is playing in the background of track now so don't leave another thought to it. This is y'all wounded and me throwing salt into. You not saying much even though your jaws are moving. And that is not real, it's like Santa Clause, Duke"
+    },
+    {
+      "_id": {
+          "$oid": "5ed0b83ffffb580f1ca9624e"
+      },
+      "title": "The Title of My Second Post",
+      "author": "Brandon White",
+      "body": "My first post contained lyrics from a verse I wrote a long time ago for a joint name Merit.Money.Muscle. This second post contains a quick bar that I've never actually used in a song. But it goes like this: Before I was a million dollar rapper, I was just a kidd with a mic. A kidd with insight. A kidd that didn't kid with the mic. This nigga get it hyped."
+    },
+    {
+      "_id": {
+          "$oid": "5ed0ba0ac76c6e0f3b26f335"
+      },
+      "title": "The Title of My Third Post",
+      "author": "Brandon White",
+      "body": "Please believe me, being this fresh ain't easy."
+    }
+  ]
+}
