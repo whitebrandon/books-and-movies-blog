@@ -23,12 +23,15 @@ router.get('/:_id', async (req, res) => {
 
 // POST / - adds a new blog post to database, and sends post back to client
 router.post('/', async (req, res) => {
-  const newLyrics = req.body;
-  const rhymes = await new rhymes(newLyrics).save();
-  if (rhymes) {
-    return res.json(blog);
-  }
-  return res.send('Something went wrong');
+  // const newLyrics = req.body;
+  // const rhymes = await new rhymes(newLyrics).save();
+  // if (rhymes) {
+  //   return res.json(blog);
+  // }
+  // return res.send('Something went wrong');
+  console.log('are you getting here?')
+  return res.send('Hi There')
+  res.json(req.body)
 })
 
 // PUT /:_id - updates a blog post and returns the updated post back to client

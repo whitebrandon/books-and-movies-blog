@@ -36,7 +36,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // redirect client to GET /api/books
-app.use('/', (req, res, next) => {
+app.get('/', (req, res) => {
   return res.redirect('/api/books');
 })
 
