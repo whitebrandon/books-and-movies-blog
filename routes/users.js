@@ -1,40 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const user = require('../models/user');
+const { asyncHandler, authenticateUser, userController } = require('../controllers');
 
-// GET / - responds with all blog posts
-router.get('/', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-});
+// GET / - returns authenticated user if user valid
+router.get('/', authenticateUser, asyncHandler((req, res) => userController.getUser(req, res)));
 
-// GET /:id - responds with blog post with a matching _id
-router.get('/:_id', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-});
+// POST / - adds a new user to database, and returns back to client
+router.post('/', asyncHandler((req, res) => userController.createUser(req, res)));
 
-// POST / - adds a new blog post to database, and sends post back to client
-router.post('/', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-})
+// PUT /:_id - updates an authenticated user and returns back to client if user valid
+router.put('/:_id', authenticateUser, asyncHandler((req, res) => userController.updateUser(req, res)));
 
-// PUT /:_id - updates a blog post and returns the updated post back to client
-router.put('/:_id', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-})
-
-// DELETE /:_id - deletes a blog post and returns nothing
-router.delete('/:_id', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-})
+// DELETE /:_id - deletes an authenticated user if valid, and returns nothing
+router.delete('/:_id', authenticateUser, asyncHandler((req, res) => userController.deleteUser(req, res)));
 
 module.exports = router;

@@ -4,6 +4,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 // routers
 const usersRouter = require('./routes/users');
@@ -12,8 +13,8 @@ const songsRouter = require('./routes/songs');
 const rhymesRouter = require('./routes/rhymes');
 
 // set env variables
-const PORT = process.env.PORT || 5000; // port for server
-const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost/rhymebook`
+const PORT = process.env.PORT; // port for server
+const MONGODB_URI = process.env.MONGOD_URI 
 
 // sets up connection
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
@@ -42,9 +43,9 @@ app.get('/', (req, res) => {
 
 // middleware for url paths
 app.use('/api/users', usersRouter);
-app.use('/api/books', booksRouter);
-app.use('/api/songs', songsRouter);
-app.use('/api/rhymes', rhymesRouter);
+app.use('/api/users/:_userId/books', booksRouter);
+app.use('/api/books/:_bookId/songs', songsRouter);
+app.use('/api/songs/:_songId/rhymes', rhymesRouter);
 
 // connect to app server
 app.listen(PORT, () => {

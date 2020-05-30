@@ -1,40 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const song = require('../models/song');
+const { asyncHandler, authenticateUser, songController } = require('../controllers');
 
-// GET / - responds with all blog posts
-router.get('/', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-});
+// GET /
+router.get('/');
 
-// GET /:id - responds with blog post with a matching _id
-router.get('/:_id', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-});
+// POST /
+router.post('/')
 
-// POST / - adds a new blog post to database, and sends post back to client
-router.post('/', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-})
+// GET /:id
+router.get('/:_id');
 
-// PUT /:_id - updates a blog post and returns the updated post back to client
-router.put('/:_id', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-})
+// PUT /:_id
+router.put('/:_id')
 
-// DELETE /:_id - deletes a blog post and returns nothing
-router.delete('/:_id', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-})
+// DELETE /:_id
+router.delete('/:_id')
 
 module.exports = router;

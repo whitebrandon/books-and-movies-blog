@@ -11,17 +11,21 @@ const SongSchema = new Schema({
     type: [String],
     required: true,
   },
-  intro: {
-    type: String,
+  intro: { 
+    type: Schema.Types.ObjectId,
+    ref: 'Rhymes',
   },
-  verses: {
-    type: [String],
-  },
-  hooks: {
-    type: [String],
-  },
-  coda: {
-    type: String,
+  verses: [{ 
+    type: Schema.Types.ObjectId,
+    ref: 'Rhymes',
+  }],
+  hooks: [{ 
+    type: Schema.Types.ObjectId,
+    ref: 'Rhymes',
+  }],
+  coda: { 
+    type: Schema.Types.ObjectId,
+    ref: 'Rhymes',
   },
   tags: [],
 });

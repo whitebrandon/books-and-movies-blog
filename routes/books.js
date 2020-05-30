@@ -1,40 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const book = require('../models/book');
+const { asyncHandler, authenticateUser, bookController } = require('../controllers');
 
-// GET / - responds with all books
-router.get('/', async (req, res) => {
-  // do stuff here
+// GET /
+router.get('/');
 
-  return res.send('Something went wrong!');
-});
+// POST /
+router.post('/')
 
-// GET /:id - responds with blog post with a matching _id
-router.get('/:_id', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-});
+// GET /:_bookId
+router.get('/:_bookId');
 
-// POST / - adds a new blog post to database, and sends post back to client
-router.post('/', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-})
+// PUT /:_bookId
+router.put('/:_bookId')
 
-// PUT /:_id - updates a blog post and returns the updated post back to client
-router.put('/:_id', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-})
-
-// DELETE /:_id - deletes a blog post and returns nothing
-router.delete('/:_id', async (req, res) => {
-  // do stuff here
-  
-  return res.send('Something went wrong!');
-})
+// DELETE /:_bookId
+router.delete('/:_bookId')
 
 module.exports = router;

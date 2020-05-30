@@ -28,7 +28,10 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
-  rhymebooks: []
+/*   rhymebooks: [{ 
+    type: Schema.Types.ObjectId,
+    ref: 'Book',
+  }] */
 });
 
 module.exports = mongoose.model('User', UserSchema);

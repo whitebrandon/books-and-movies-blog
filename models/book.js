@@ -9,11 +9,14 @@ const BookSchema = new Schema({
     type: String,
     required: true,
   },
-  owner: {
-    type: String,
-    required: true,
-  },
-  songs: [],
+  owner: [{ 
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  }],
+  songs: [{ 
+    type: Schema.Types.ObjectId,
+    ref: 'Song',
+  }],
   createdAt: {
     type: Date,
     default: Date.now(),

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const RhymesSchema = new Schema({
+const RhymeSchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -32,4 +32,4 @@ const RhymesSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('Rhymes', RhymesSchema);
+module.exports = mongoose.model('Rhyme', RhymeSchema);
