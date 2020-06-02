@@ -1,28 +1,52 @@
 {
-  "blogPosts": [
+  "users": {
+    "_id": "5ebr00fr9170lpq6315hg5312",
+    "firstName": "Brandon",
+    "lastName": "White",
+    "username": "chldprdgy720",
+    "emailAddress": "chldprdgy720@yahoo.com",
+    "password": "Bwhit228"
+  },
+  "books": {
+    "title": "B.L.A.C.K.: Bread Leavens After Continuous Kneading",
+    "owner": "5ebr00fr9170lpq6315hg5312",
+    "songs": []
+  },
+  "songs": {
+    "title": "Anthology",
+    "author": "Brandon White",
+    "verses": [],
+    "hooks": [],
+    "tags": []
+  },
+  "rhymes": [
     {
-      "_id": {
-          "$oid": "5ed00fb9c170e10898ce5974"
-      },
-      "title": "My First Blog",
-      "author": "Brandon White",
-      "body": "Yo, I might not got paper, but my rhymes greater. So even the folk that only understand sign language is understanding my flavor. I make 'em through tantrums like cry babies. They ride reckless on the beat, I drive safely. I try not to hurt 'em but I might maybe have 'em dumbfounded by my wise sayings. The tables turned and the tides changing. The momentum shifts. I'm always. I end, I begin again. When life closes a door, The Lord opens other entrances. And I walk through 'em. Homey what in the hell are y'all doing? That's not rapping right there, the fame got y'all ruined. So I had to set some booth time aside to talk to 'em. You already know what's going on, like the Jaws music is playing in the background of track now so don't leave another thought to it. This is y'all wounded and me throwing salt into. You not saying much even though your jaws are moving. And that is not real, it's like Santa Clause, Duke"
+      "_id": "5ed00fb9c170e10898ce5974",
+      "title": "Verse 1",
+      "artist": "Brandon White",
+      "lyrics": "This is my gift. My curse. This is much more than a real tight verse. All about cake. That is what Mister White was. Now this is what Mister White is. Still I write words. Kidd, I got plenty to spit. So many options. Paper or plastic. Chicken or fish. This is me getting a grip. On the mountain top or the cliff. Like I'm fixing to slip. The bars, I pack them with a cynical wit. Menace, my rhymes are still fat like Jiminy Glick. Right here. This is where it ends and begins. New sound. It's round. The river bend. This is my right. This is my wrong. This is my story. This is my song. This is my fortress. This is my home. This is my battle. Kidd, I lock horns. This is my beatiful struggle. This is my usual hustle. These are the truths I've uncovered. This is my substance abuse. This is the abuse of my substance.",
+      "category": "Verse"
     },
     {
-      "_id": {
-          "$oid": "5ed0b83ffffb580f1ca9624e"
-      },
-      "title": "The Title of My Second Post",
-      "author": "Brandon White",
-      "body": "My first post contained lyrics from a verse I wrote a long time ago for a joint name Merit.Money.Muscle. This second post contains a quick bar that I've never actually used in a song. But it goes like this: Before I was a million dollar rapper, I was just a kidd with a mic. A kidd with insight. A kidd that didn't kid with the mic. This nigga get it hyped."
+      "_id": "5ed0b83ffffb580f1ca9624e",
+      "title": "Verse 2",
+      "artist": "Brandon White",
+      "lyrics": "This is my joy. My pain. This is hip hop without fortune and fame. This is my blood. This is what courses my veins. This is my love for the game. This is not self. This is not personal gain. This is not more of the same. This is me different. This is me morbidly strange. This is me showing restraint. This is a heightened caloric intake. These bars symbolize my face marked with warrior's paint. This is my life fitted inside of a four minute frame. I cook rhymes. I am a Foreman grilling machine. This is my comfort. These are my fears. This is my laughter. These are my tears. It's not over there. It is right here. This is what I have. Freely I give. This is my manual labor. This is the outcome. These are the ramifications. This is the hip hop plan of salvation.",
+      "category": "Verse"
     },
     {
-      "_id": {
-          "$oid": "5ed0ba0ac76c6e0f3b26f335"
-      },
+      "_id": "5ed0ba0ac76c6e0f3b26f335",
       "title": "The Title of My Third Post",
-      "author": "Brandon White",
-      "body": "Please believe me, being this fresh ain't easy."
+      "artist": "Brandon White",
+      "lyrics": "This is my first. My last. These are my visions. Thoughts of the world gone past. This is my terra. This is the earth in my grasp. This is the purpose I have. This is me kind. This is my merciless wrath. This is me nervously wracked. Whatever is real. I am most certainly that. This is performance enhanced. This is near future. This is right now. This is precursor to rap. This is a peek at my soul. These are my curtains pulled back. This is assertively black. This is the man. This is the myth. I am not well. This is so sick. This is what's to come. This is what if. This is wide open. Mental abyss. This is my conflict internal. This is a john blaze. This is a johnny inferno. This is that something supernal. This is the lead from my tool as it burns through my journal.",
+      "category": "Verse"
+    },
+    {
+      "_id": "5ed45e8074e8e3a3771d1bfd",
+      "title": "Anthology Hook",
+      "artist": "Brandon White",
+      "lyrics": "This is my anthology. This music sets me free. This is my stress relieved. This is my destiny.",
+      "category": "Hook"
     }
   ]
 }

@@ -4,6 +4,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
 require('dotenv').config();
 
 // routers
@@ -33,6 +34,7 @@ db.once("open", async () => {
 /* EXPRESS SERVER */
 const app = express();
 
+app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -43,7 +45,7 @@ app.get('/', (req, res) => {
 
 // middleware for url paths
 app.use('/api/users', usersRouter);
-app.use('/api/users/:_userId/books', booksRouter);
+app.use('/api/books', booksRouter);
 app.use('/api/books/:_bookId/songs', songsRouter);
 app.use('/api/songs/:_songId/rhymes', rhymesRouter);
 

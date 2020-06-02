@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { asyncHandler, authenticateUser, rhymesController } = require('../controllers');
+const { asyncHandler, authenticateUser, rhymeController } = require('../controllers');
+
+// BASE URL: /api/songs/:_songId/rhymes
 
 // GET / - returns all rhymes belonging to a user
-router.get('/');
+router.get('/', asyncHandler((req, res) => rhymeController.getRhymeCollection()));
 
 // POST / - adds a new rhyme to user's collection
 router.post('/')

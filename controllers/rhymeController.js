@@ -7,6 +7,7 @@ module.exports = {
    * 
    */
   getRhymeCollection: async (req, res) => {
+    console.log('Was I called?')
     const rhymeCollection = await Rhyme.find();
     if (rhymeCollection) {
       return res.json(rhymeCollection);

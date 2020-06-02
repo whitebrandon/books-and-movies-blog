@@ -2,8 +2,10 @@ const express = require('express');
 const router = express.Router();
 const { asyncHandler, authenticateUser, bookController } = require('../controllers');
 
+// BASE URL: /api/books
+
 // GET /
-router.get('/');
+router.get('/', asyncHandler((req, res) => bookController.getBookCollection(req, res)));
 
 // POST /
 router.post('/')

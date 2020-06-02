@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { asyncHandler, authenticateUser, userController } = require('../controllers');
 
+// BASE URL: /api/users
+
 // GET / - returns authenticated user if user valid
 router.get('/', authenticateUser, asyncHandler((req, res) => userController.getUser(req, res)));
 

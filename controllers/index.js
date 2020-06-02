@@ -3,7 +3,7 @@
 const userController = require('./userController');
 const bookController = require('./bookController');
 const songController = require('./songController');
-const rhymesController = require('./rhymesController');
+const rhymeController = require('./rhymeController');
 
 module.exports = {
 
@@ -41,6 +41,6 @@ module.exports = {
   songController,
 
   // contains all rhymesController methods
-  rhymesController,
+  rhymeController,
 
 }

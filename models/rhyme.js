@@ -9,7 +9,7 @@ const RhymeSchema = new Schema({
     type: String,
     required: true,
   },
-  author: {
+  artist: {
     type: String,
     require: true,
   },
