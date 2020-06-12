@@ -7,13 +7,10 @@ module.exports = {
    * 
    */
   getUser: (req, res) => {
-    //const message = "This set up works || Here's the host: " + req.headers.host;
-    //return res.send(message);
     User.find({}, (error, results) => {
       if (error) {
         return console.error("There was an error: ", error)
       }
-      console.log(results);
       return res.status(200).json(results);
     })
   },
@@ -35,13 +32,23 @@ module.exports = {
    * 
    */
   updateUser: (req, res) => {
-    return res.send('Route not set up yet')
+    User.findByIdAndUpdate(req.params._id, req.body, {new: true}, (error, result) => {
+      if (error) {
+        console.error("There was an error: ", error)
+      }
+      return res.status(204).send();
+    })
   },
 
   /**
    * 
    */
   deleteUser: (req, res) => {
-    return res.send('Route not set up yet')
+    User.findByIdAndDelete(req.params._id, (error, result) => {
+      if (error) {
+        console.error("There was an error: ", error)
+      }
+      return res.status(204).send();
+    })
   }
 }
