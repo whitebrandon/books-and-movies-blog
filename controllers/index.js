@@ -1,5 +1,9 @@
 'use strict';
 
+const auth = require('basic-auth');
+
+const User = require('../models/user');
+
 const userController = require('./userController');
 const bookController = require('./bookController');
 const songController = require('./songController');
@@ -13,7 +17,8 @@ module.exports = {
    */
   asyncHandler: (callback) => async (req, res, next) => {
     try {
-      await callback(req, res, next);
+      //console.log('THIS IS JUST A TEST: ', req.user);
+      callback(req, res, next);
     } catch (err) {
       console.log(err)
     }
@@ -25,7 +30,18 @@ module.exports = {
   authenticateUser: async (req, res, next) => {
     try {
       // steps to authenticate user go here
-      next();
+      const user = auth(req);
+      if (user && user.name && user.pass) {
+        User.find({username: user.name}, (error, result) => {
+          if (error) {
+            console.error('Error: ', error)
+          }
+          req.user = result;
+          next();
+        })
+      } else {
+        res.status(401).send(Error('Not Authorized', 'controllers/index.js', '43'));
+      }
     } catch (err) {
       console.log(err);
     }

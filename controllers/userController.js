@@ -7,7 +7,7 @@ module.exports = {
    * 
    */
   getUser: (req, res) => {
-    User.find({}, (error, results) => {
+    User.find({_id: req.user[0]._id}, (error, results) => {
       if (error) {
         return console.error("There was an error: ", error)
       }
@@ -19,8 +19,7 @@ module.exports = {
    * 
    */
   createUser: (req, res) => {
-    const user = new User(req.body);
-    user.save(req.body, (error, result) => {
+    User.create(req.body, (error, result) => {
       if (error) {
         console.error("There was an error: ", error)
       }

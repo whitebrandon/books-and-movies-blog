@@ -9,10 +9,14 @@ const BookSchema = new Schema({
     type: String,
     required: true,
   },
-  owner: [{ 
-    type: Schema.Types.ObjectId,
-    ref: 'User',
-  }],
+  owners: { 
+    type: [{
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    }],
+    required: 'Please include at least one owner in the owners array',
+    default: undefined
+  },
   songs: [{ 
     type: Schema.Types.ObjectId,
     ref: 'Song',

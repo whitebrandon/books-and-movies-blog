@@ -5,18 +5,18 @@ const { asyncHandler, authenticateUser, bookController } = require('../controlle
 // BASE URL: /api/books
 
 // GET /
-router.get('/', asyncHandler((req, res) => bookController.getBookCollection(req, res)));
+router.get('/', authenticateUser, asyncHandler((req, res) => bookController.getBookCollection(req, res)));
 
 // POST /
-router.post('/')
+router.post('/', authenticateUser, asyncHandler((req, res) => bookController.createBook(req, res)));
 
 // GET /:_bookId
-router.get('/:_bookId');
+router.get('/:_bookId', authenticateUser, asyncHandler((req, res) => bookController.getBook(req, res)));
 
 // PUT /:_bookId
-router.put('/:_bookId')
+router.put('/:_bookId', authenticateUser, asyncHandler((req, res) => bookController.updateBook(req, res)))
 
 // DELETE /:_bookId
-router.delete('/:_bookId')
+router.delete('/:_bookId', authenticateUser, asyncHandler((req, res) => bookController.deleteBook(req, res)))
 
 module.exports = router;
